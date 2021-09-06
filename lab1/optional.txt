@@ -1,3 +1,15 @@
+Query11: > select name,rollno,max( ( student.math+student.sci+student.eng+student.social+student.sports) /5) as avgs from student group by name,rollno;
++--------+--------+---------+
+| name   | rollno | avgs    |
++--------+--------+---------+
+| dwayne |     33 | 86.8000 |
+| john   |     58 | 79.8000 |
+| dave   |     27 | 78.6000 |
+| randy  |     56 | 74.8000 |
+| kane   |     11 | 72.6000 |
+| tom    |     50 | 75.4000 |
++--------+--------+---------+
+
 Query12: > select name from student where INSTR(name,'a')=2
 
 + --------- +
