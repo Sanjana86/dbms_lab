@@ -1,0 +1,100 @@
+Query1 : > select cid from Campus where law = true
+
++ -------- +
+| cid      |
++ -------- +
+| 101      |
+| 107      |
++ -------- +
+
+Query2 : > select name,rollno,age,math,sci,sports from Student where name = "dave"
+
++ --------- + ----------- + -------- + --------- + -------- + ----------- +
+| name      | rollno      | age      | math      | sci      | sports      |
++ --------- + ----------- + -------- + --------- + -------- + ----------- +
+| dave      | 27          | 22       | 54        | 68       | 77          |
++ --------- + ----------- + -------- + --------- + -------- + ----------- +
+
+Query3 : > select name, rollno from Student where math>80 or sci>80
+
++ --------- + ----------- +
+| name      | rollno      |
++ --------- + ----------- +
+| dwayne    | 33          |
+| john      | 58          |
+| kane      | 11          |
+| tom       | 50          |
++ --------- + ----------- +
+
+Query4 : > select distinct social from Student
+
++ ----------- +
+| social      |
++ ----------- +
+| 96          |
+| 98          |
+| 67          |
+| 57          |
+| 74          |
++ ----------- +
+
+Query5 : > select count(eng) from Student where eng < 70
+
++ --------------- +
+| count(eng)      |
++ --------------- +
+| 3               |
++ --------------- +
+
+Query6 : > select name,rollno,math,sci from Student where math>90 and sci>90
+
++ --------- + ----------- + --------- + -------- +
+| name      | rollno      | math      | sci      |
++ --------- + ----------- + --------- + -------- +
+| dwayne    | 33          | 98        | 94       |
++ --------- + ----------- + --------- + -------- +
+
+Query7 : > select loc from Campus where engg = 0
+
++ -------- +
+| loc      |
++ -------- +
+| bom      |
++ -------- +
+
+Query8 : > select sum(case when engg=true then cap else 0 end)/sum(case when engg=false then cap else 0 end) as engg_to_nonEngg_ratio  from Campus
+
++ -------------------------- +
+| engg_to_nonEngg_ratio      |
++ -------------------------- +
+| 2.0000                     |
++ -------------------------- +
+
+Query9 : EMPTY SET
+
+Query10 : > select count(rollno) from Student where rollno<=20
+
++ ------------------ +
+| count(rollno)      |
++ ------------------ +
+| 1                  |
++ ------------------ +
+
+
+> select count(rollno) from Student where rollno>20 and rollno<41
+
++ ------------------ +
+| count(rollno)      |
++ ------------------ +
+| 2                  |
++ ------------------ +
+
+> select count(rollno) from Student where rollno>40 and rollno<61
+
++ ------------------ +
+| count(rollno)      |
++ ------------------ +
+| 3                  |
++ ------------------ +
+
+
