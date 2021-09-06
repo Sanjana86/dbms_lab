@@ -1,10 +1,10 @@
 use university_profile;
 
 #11.Class teacher wants to find the student name and rollno with the maximum avg in all subjects. ( google sum or avg)
-	select name,rollno from student where ((math+sci+eng+social+sports)/5)=(select max((math+sci+eng+social+sports)/5) from student);
+	select name,rollno,((math+sci+eng+social+sports)/5) from Student where ((math+sci+eng+social+sports)/5)=(select max((math+sci+eng+social+sports)/5) from student);
 
 #12.An inquisitive student wants to find out the names of students whose names have the letter ‘a’ in the second position of their name
-	select name from student where INSTR(name,'a')=2;
+	select name from Student where INSTR(name,'a')=2;
 
 #13.A math faculty wants to focus on the weak students first so he wants to see the names and marks of the students in asc order of marks
 	select name,math from Student order by math asc;
