@@ -1,0 +1,23 @@
+Query12: > select name from student where INSTR(name,'a')=2
+
++ --------- +
+| name      |
++ --------- +
+| dave      |
+| randy     |
+| kane      |
++ --------- +
+
+Query13: > select name,math from Student order by math asc
+
++ --------- + --------- +
+| name      | math      |
++ --------- + --------- +
+| dave      | 54        |
+| randy     | 69        |
+| john      | 70        |
+| tom       | 76        |
+| kane      | 86        |
+| dwayne    | 98        |
++ --------- + --------- +
+
