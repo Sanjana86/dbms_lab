@@ -1,9 +1,9 @@
 Query11: > select name,rollno from student where ((math+sci+eng+social+sports)/5)=(select max((math+sci+eng+social+sports)/5) from student);
-+--------+--------+
-| name   | rollno |
-+--------+--------+
-| dwayne |     33 |
-+--------+--------+
++ --------- + ----------- + ------------------------------------- +
+| name      | rollno      | ((math+sci+eng+social+sports)/5)      |
++ --------- + ----------- + ------------------------------------- +
+| dwayne    | 33          | 86.8000                               |
++ --------- + ----------- + ------------------------------------- +
 
 Query12: > select name from student where INSTR(name,'a')=2
 
