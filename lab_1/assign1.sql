@@ -1,1 +1,0 @@
-use university_profile;
