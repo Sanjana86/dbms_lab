@@ -34,7 +34,8 @@ Query 3 > select avg(math) as avg_math,team from student where gender='M' group 
 |  86.0000 | G    |
 +----------+------+
 
-Query 4 > select * from student group by team,gender order by team, gender desc;+---------+--------+------------+-------+--------+------+------+------+------+--------+--------+
+Query 4 > select * from student group by team,gender order by team, gender desc;
++---------+--------+------------+-------+--------+------+------+------+------+--------+--------+
 | name    | rollno | dob        | yjoin | gender | team | math | sci  | eng  | social | sports |
 +---------+--------+------------+-------+--------+------+------+------+------+--------+--------+
 | dave    |     27 | 1999-09-11 |  2018 | M      | A    |   54 |   68 |   98 |     96 |     77 |
